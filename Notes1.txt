@@ -102,7 +102,7 @@ exeuting parcel entry point
 
 npx parcel index.html --https
 
-npm parcel build index.js - > production ready minified files
+npx parcel build index.js - > production ready minified files
 exeuting parcel entry point 
 
 
