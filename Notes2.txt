@@ -1,0 +1,6 @@
+Polyfill will be a replacement for new version of code.
+
+Babel will take our latest ES6 code convert into old version code for browser.
+Its a javascript compiler
+
+Git is a devops tool for source code management

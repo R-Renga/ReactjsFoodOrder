@@ -1,0 +1,143 @@
+//EMMET//
+
+1.Emmet is used to write shortcut code that expand as bigger code.so this will make you 
+  to write code faster.
+
+EXMAPLE - SPAN.PURPLE = CLASS, SPAN#ID = ID
+
+
+//Difference between framework and library?
+
+1.The main difference between the framework and library is that inversion of control.
+
+In library, you are in the charge of the flow of application.you need to decide when and where the 
+library was needed.
+
+In framework,framework in the charge of the flow of application,it give some places to put our code.
+
+function sum (a + b){
+    return a + b;
+} = > library
+
+//REACT//
+
+React is a free and open source front end javascript library for building web applications based on UI 
+components.
+
+React is a View in Mvc pattern ,user can the change the data or click around anywhere so view will react,so
+only they called as react
+
+//MVC//
+
+MVC is a software design pattern that organizing the application code into three parts MODEL,VIEW,CONTROLLER
+MODEL      - MODEL IS A LOGIC FOR INTERACTING WITH DATABASE
+VIEW       - VIEW IS THE USER INTERFACE FOR USER INTERACT
+CONTROLLER - CONTROLLER IS MEDIATER BETWEEN MODEL AND VIEW, ITS HANDLE REQUEST/RESPONSE. 
+
+
+//REACT DOM//
+
+ReactDom is Used to render the ui component in browser.
+ReactDom is a package that provide dom specific methods that can be used at top level of our web page.
+
+
+//Virtual DOM
+The virtual dom is nothing but the representation of real dom but the main difference is
+for every change the vrtual dom only gets updated not a real dom,so the change only be re rendered.
+
+
+
+
+//DIFFERENCE BETWEEN REACT AND REACT DOM
+React is responsible for creating views also helpful for components
+props ,state and other react stuffs and ReactDom is used to render the ui in browser
+
+
+
+//CDN
+CONTENT DELIVERY NETWORK are handy and they require only minimum setups.
+React CDNs are allow us to get all the features of react that we need.
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+DISADVANTAGE OF CDN
+1.Restrictions
+2.cost
+
+
+//What is difference between react.development.js and react.production.js files via CDN?
+react.production.js have the minified and optimized version of react
+
+
+
+
+//CROSS ORGIN AND CROSS ORIGIN IN SCRIPT TAG
+
+CORS = CROSS ORIGIN RESOURCE SHARING
+cors is the header based mechanism and that allows server to indicate any origin which means any domain, etc.
+EXAMPLE :
+
+A - B
+if A need something from B means,first preflight cors mechanism will happen
+
+A -> preflight REQUEST -> B
+B-> CORS mechanism uses additional http headers to verify that request and b will send some additional
+ http header -> A
+A - > Actual to B Post ->B
+
+SOME HTTP HEADERS
+1.accept control allow origin : *
+2.accept control allow methods (put,post,get,delete)
+
+npm i cors
+require
+app.use(cors({
+  origin:"*",
+  methods :{PUT,POST,GET,DELETE}
+}))
+
+CROSS ORIGIN IN SCRIPT TAG - provide support for CORS
+
+
+//ASYNC AND DEFER
+
+when you load the webpage two things will happen in browser
+1.html parsing
+2.script loading
+  1)fetching the script from network
+  2)executing script line by line.
+
+script async
+when the html parsing happen ,parallely fetching the script from network will work,
+then parsing stop at one time executing script line by line process will happen,finally html
+parsing will continous.
+
+differ
+when the html parsing happen ,parallely fetching the script from network will work,after 
+both process complete fully script exeution process will happen and complete the whole process.
+
+
+
+//GIT PUSH STEPS//
+
+new respository
+
+git init
+
+git add .
+
+git status
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/R-Renga/Reactjs-HelloWorld.git
+
+git push -u origin master
+
+credentials
+
+Done
+
+
+
