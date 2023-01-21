@@ -1,7 +1,9 @@
 Polyfill will be a replacement for new version of code.
 
-Babel will take our latest ES6 code convert into old version code for browser.
+Babel will take our latest ES6 code convert into old version code for old browsers.
 Its a javascript compiler
+
+so that it can be executed by a web browser
 
 Git is a devops tool for source code management.
 
@@ -10,3 +12,99 @@ Git is a devops tool for source code management.
 remove the console using npm
 
 npm i babel-plugin-transform-remove-console
+
+
+when we have multiple childs,its needs to be have an separate key for every child,because its helpful for react to
+render that separate key.otherwise whole dom structure will re render.
+
+
+React.createElement => Object => Html(DOM)
+
+
+So its difficult to write react.createElement if we have multiple childs,so JSX CAME TO PICTURE
+
+jsx used to write html like syntax in javascript and place in the DOM.
+
+In more words jsx uses react.createElement behind the scenes that converted into Object and thats converted into html(DOM).
+
+a syntax extension for JavaScript.
+
+Babel doing this for us ...it convert jsx to react.createElement(concepts)
+
+differences :
+1.singleparent
+2.js directly in jsx
+3.self close tag (option)
+4.attributes in camelcase   
+
+
+advantages :
+1.readablity
+2.maintainable
+3.js directly in jsx
+4.performance through the virtual dom
+
+
+The Type attribute used in the script tag used to indicate the type of script being used in the webpage.
+if we use these it will be better compatabilty for old browsers.
+
+vbscript - internetexplorer
+module  - ecmascript
+
+
+
+
+When we have multiple line ,put parathesis first ().
+
+
+id is the concept in html, but in react key is used to find the uniqueness in html.
+
+packagelock have the exact versions of dependencies we have.
+
+node_modules - package.lock => it have the transitive dependencies
+
+
+
+React components
+
+1.Functional components - new
+2.Class components - old
+
+
+components in react are reusable piece of code ,that are the specific aspect of user interface.
+
+it was a building block of react application.
+
+Functional components : its nothing but a functions and it returns the react element.
+
+function header1 (){
+    return <h1>hi</h1>
+}
+
+class components :  its a javascript class, its extend the react.component and implement render method to return 
+                    the react element.
+
+class header1 extends React.component {
+    render(){
+        return <h1>hi</h1>
+    }
+}
+
+
+
+malicous => hacker wants something to inject in our application
+
+jsx take care of xss (malicious)
+
+xss - cross site scripting
+
+
+whatever we write in jsx it execute in server.
+
+
+component composition => if you want to use one component in another component that is component composition.
+
+Arrow function is a shortand notation for javascript functions.it was introduced in ecmascript ES6.
+
+arrow function have more relaxed this binding.In normal function ,this was determined how the function was called,
+but in arrow,the value this determined by the scope which the function is defined.

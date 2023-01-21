@@ -1,3 +1,46 @@
-#title {
-    background-color: red;
+.header{
+display: flex;
+justify-content: space-between;
+margin: -8px;
+box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    padding-right: 30px !important; 
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    color: rgb(55, 0, 0);
+    padding: 23px 20px; 
+}
+
+.logo{
+    width:150px;
+}
+
+.cards{
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+    width: 200px;
+    padding: 16px;
+    margin: 10px;
+    margin-top: 37px;
+    overflow-wrap : anywhere;
+
+}
+
+.cards > img{
+    width: 100%;
+}
+
+.cards > h3 {
+    font-size: 17px;
+}
+
+.restaurent-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

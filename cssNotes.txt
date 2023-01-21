@@ -1,0 +1,50 @@
+//Display : flex
+make the child items to the right side.
+
+//justify-content - 
+spacebetween
+spaceevenly
+center
+space around
+
+
+//marigin 
+it gives some space between to the walls
+
+
+//nav-items > ul
+
+for getting innerlevel use > symbol
+
+
+//padding 
+
+its work only inside tags like inside one box.
+
+
+
+//display inline block
+
+Its makes it as straight
+
+
+//box - shadow
+
+it gives some shadow to the box
+
+
+
+//flex-wrap :
+
+flex -wrap means its comes to the next line if the line was full
+
+
+//config-driven-ui
+
+config driven ui - it will generate the UI based on data comes from backend .
+
+
+//overflow-wrap: break-word;
+1.line-breaks
+
+break the words to next line

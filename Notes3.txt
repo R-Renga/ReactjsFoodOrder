@@ -1,0 +1,98 @@
+header
+body
+  1.searchbar
+  2.cards
+    1.image
+    2.price
+    3.ratings
+footer
+  1.links
+  2.copyright
+
+
+
+  Jsx will have only one root,one parent.
+
+  Use React.Fragment to resolve that
+
+  or
+
+  <> </> empty tags
+
+
+React Fragment was the component that is given by react library.
+
+
+Use AppLayout Component for all the component to execute. put that applayout in render
+
+Is Jsx is mandatory for react?
+No,Use React.createElements
+
+
+Is Es6 is mandatory for react?
+No,But it will have new features 
+
+1.Arrow Functions
+2.Modules
+3.Template Literals
+4.Destructring
+5.classes
+
+ctrl + k + c => write comments in jsx
+
+
+<h4>{ibaco.Ratings} stars</h4> => string interpolation
+
+
+
+//optional chaining
+createorder?.()
+
+? => it is an operator access for using object property and function invoke.
+
+
+//props :
+
+props means properties,it will helps to pass data from the parent component to the child component to
+render some dynamic data in the component.
+
+
+
+//spread operator : 
+
+spread operator used to spread all the elements of an array and object into a new array or object.
+
+
+
+//Virtual Dom : 
+
+React uses something known as virtual Dom
+
+Virtual Dom is a respresentation of actual dom.
+
+it uses reconcilation, that has differ algorthim that finds out the difference between dom trees and 
+only re render the portion only what we required.
+
+Browser doing this
+
+
+//keys :
+
+
+Keys gives uniqueness for every element we using and it helps virtualDom to re render only updated portions.
+
+can we use index as key?
+yes,but thats not good way 
+
+
+
+//React Fiber
+
+React Fiber is a reconcilation that was introduced in react 16.
+
+It will increase performnce by rendering the components into small chunks that spread over the multiple frames. 
+This allow user to perform some other tasks
+
+1.priority levels(updates)
+
+
