@@ -57,6 +57,17 @@ props means properties,it will helps to pass data from the parent component to t
 render some dynamic data in the component.
 
 
+<RestaurentCards restaurent = {restaurent[0]} />
+
+
+const RestaurentCards = (props) => {
+return (
+  <h1>{props.name}</h1>
+)
+}
+
+
+
 
 //spread operator : 
 
@@ -95,4 +106,9 @@ This allow user to perform some other tasks
 
 1.priority levels(updates)
 
+
+//Reconcilation
+
+
+reconcilation is process react uses to update the DOM.
 

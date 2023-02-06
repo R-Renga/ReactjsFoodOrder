@@ -6,6 +6,9 @@
 EXMAPLE - SPAN.PURPLE = CLASS, SPAN#ID = ID
 
 
+//Single Page application
+1.spa is website that interact with the user dynamically and rerender the current page only not entire new pages.
+
 //Difference between framework and library?
 
 1.The main difference between the framework and library is that inversion of control.
@@ -84,7 +87,7 @@ if A need something from B means,first preflight cors mechanism will happen
 A -> preflight REQUEST -> B
 B-> CORS mechanism uses additional http headers to verify that request and b will send some additional
  http header -> A
-A - > Actual to B Post ->B
+A - > Actual request to B Post ->B
 
 SOME HTTP HEADERS
 1.accept control allow origin : *

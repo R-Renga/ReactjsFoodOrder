@@ -102,7 +102,7 @@ exeuting parcel entry point
 
 npx parcel index.html --https
 
-npx parcel build index.js - > production ready minified files
+npx parcel build index.html - > production ready minified files
 exeuting parcel entry point 
 
 
@@ -122,7 +122,7 @@ parcel Advantages
 
 1.HMR = HOT MODULE REPLACEMENT - It will reload your browser everytime u update the files.
 2.File Watcher Algorthim - written on c++.
-3..parcel.cache = this file takes some space to do minification of our code and some other things.
+3..parcel-cache = this file takes some space to do minification of our code and some other things.
 4.dist - folder - all the minified code will be push into dist folder.
 5.bundling
 6.minified

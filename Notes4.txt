@@ -1,0 +1,110 @@
+//src folder
+
+
+src folder is help us to maintain the code readable.
+
+every features and routes also have separate files.
+
+//components
+ 
+Every features in react works under components,so it will have the separate folder.it comes under src folder.
+
+All the components and all files runs under one root. => that is App.js/index.js , so it will be in direct src folder
+
+
+
+Import and export
+
+There are two ways of import and export the files
+
+default import and export
+
+
+/**
+export default functionname
+
+default import only one thing
+
+import functionname from './app';
+
+we can give any name while import
+**/
+
+
+/**
+export by names
+
+using this we export mulitple Functions
+
+import {functionnames1,functionname2} from './app.js';
+
+import * as obj from './app';
+
+obj.functionname1();
+
+**/
+Both:
+
+import Header,{function names1,function name2}  from './app.js';
+import Header,{function names1,function name2}  from './app';
+
+jsx/js - both are same for file name
+
+
+../ used to navigate to the parent  directory
+
+./ used to navigate to the current directory
+
+config file and Constant file  => Both are used to maintain the hard code datas, which means global data against variable.
+
+
+
+//Input tag
+
+
+when use value attribute in input tag, cant able to write text inside.
+
+//onChange
+
+it was an event attribute , it gives output as an object
+
+
+
+///***************** important**************//
+
+If you want to maintains the variable that changes means,then u want to maintain the react kind of variable.
+
+
+react variable === state variable
+
+Every component in react maintains the state ,you can put all the variable in that state.
+
+every time when u  create local variable you  use state inside react.then only state maintains the variable.
+
+
+
+Hooks is nothing but a function,its used to use state and other react features in functional component.
+
+In react we cant able to change or update the local variable data,so react gives state for us to update the
+modify the data.
+
+
+
+Usestate : 
+
+It was a react hook, its used to modify the local variable,it returns the array with two elements, first one was written
+state variable,second one was a function that used to update that variable value.
+
+const [firstelement, setFirstElement] = useState()
+
+
+onChange = > onchange is used to triggered the event when value of elements changes
+
+React doesn't know that where the local variable changing.  
+
+DataBinding = it will establish your connection between your UI and Data.ui will change automaticaaly when the state changes.
+React is the one way binding
+
+
+
+

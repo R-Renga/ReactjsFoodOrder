@@ -44,3 +44,8 @@ box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.search-container{
+    margin-left: 41%;
+    margin-top: 29px;
+}

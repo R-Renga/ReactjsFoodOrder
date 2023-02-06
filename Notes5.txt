@@ -1,0 +1,122 @@
+//state :
+
+
+state manages the data overtime for our  application.
+
+it can be often changed by the user.
+
+
+
+//optional chaining
+
+it used to check whether the value exist or not
+
+const obj = {
+    name
+}
+
+if(obj?.name){
+
+}
+
+
+
+//microservice and monolith
+
+monolith architecture means...it was an one application,all the projects that happen in one application,
+ui,backend etc..everything happen in one application.
+
+if even one button changes whole application needs to be deploy.
+
+
+microservice arichtecture was split the application, for example
+ui have separate project,backend have separate project
+
+it have different port,but runs in one domain
+it connect using url
+
+
+//Js expression - it produces the value
+ 1 => 1
+ "hello" => "hello"
+
+ 5*2 => 10
+
+ //js statement - it tell javascript to do things
+
+
+ //USE EFFECT //
+
+ Use effect is a hook,its a function and it do something after component render.
+
+ It allow us to interact with the outside world, synchronize the component with external system.
+
+ It have two parameter,
+ 1.callback function - to do something
+ 2.dependencies - use effect will render based on the dependencies.
+
+load = renderui = api = updateui
+
+
+
+
+
+
+ //Conditional rendering
+
+ Using this we can render the component based on conditions
+
+
+ return (allrestaurent.length === 0)? <shimmer/> : (
+
+ )
+
+
+ <div>
+ {isloading && <h1>raja</h1>}
+ {isloading && </component>}
+ </div>
+
+// not render component
+
+
+ before return
+
+  if (!allRestaurent) return null; 
+
+
+  //data.json
+
+  we parsing the response data in json object.
+
+  we able to access the data in more usable format using .json method
+
+
+
+
+ //async await
+
+async await are the keyword in javascript,its used to write asynchrounous code, that is readable and maintain.
+
+A asynchrounous function that is declared with async keyword before, it will return the value,if it is resolved or return
+error if it was reject.
+
+await is used to stop the execution of the function until the promise is resolved.
+
+//example :
+
+const fetching = async  () => {
+try{
+const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.7869994&lng=79.13782739999999&page_type=DESKTOP_WEB_LISTING");
+const value = await data.json();
+return value;
+}catch(error) {
+return error;
+}
+}
+
+
+
+  //shimmer ui
+
+shimmer ui is a loading indicator, it purpose was it provide some visual feeback to the user before the data being fetched.

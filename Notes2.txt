@@ -1,4 +1,4 @@
-Polyfill will be a replacement for new version of code.
+Polyfill will be a replacement for new version of code.for oldest browsers.
 
 Babel will take our latest ES6 code convert into old version code for old browsers.
 Its a javascript compiler
