@@ -58,7 +58,7 @@ it connect using url
 load = renderui = api = updateui
 
 
-
+if dependencies was empty,it will be call for every render.
 
 
 

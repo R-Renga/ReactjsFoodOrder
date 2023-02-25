@@ -1,7 +1,8 @@
 import RestaurentCards from "./RestaurentCards";
-import {RestaurentList} from "../Constant";
+import {RestaurentList} from "../Constants";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 
@@ -10,20 +11,20 @@ function filterdata(searchText,allRestaurent) {
 }
 
 
-const Body = () => {
 
+const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [allRestaurent, setallRestaurent] = useState([]);
   const [filterData, setFilterData] = useState([]);
 
   useEffect(() => {
    getRestaurents();
-  }, []);
+  },[]);
   
   async function getRestaurents(){
     try {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.7869994&lng=79.13782739999999&page_type=DESKTOP_WEB_LISTING")
-      const json = await data.json();// readable stream
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.053536&lng=77.061564&page_type=DESKTOP_WEB_LISTING")
+      const json = await data.json();
       setallRestaurent(json?.data?.cards[2]?.data?.data?.cards)
       setFilterData(json?.data?.cards[2]?.data?.data?.cards)
     } catch (err) {
@@ -32,12 +33,11 @@ const Body = () => {
     }
   }
 
-  console.log("render")
 
   if (!allRestaurent) return null; 
 
   if (!filterData) return null;
-
+  
   return (allRestaurent?.length === 0) ? <Shimmer/> : (
     <>
       <div className="search-container">
@@ -59,16 +59,22 @@ const Body = () => {
       <div className="restaurent-cards">
         {
           filterData.map(restaurant => {
-            return <RestaurentCards
-              {...restaurant?.data}
-              key = {restaurant?.data?.id}
-            />
+            return (
+              <Link
+                to={"restaurant/" + restaurant.data.id}
+                key={restaurant?.data?.id}>
+              <RestaurentCards
+            {...restaurant?.data}
+          /></Link>
+            ) 
           })
        } 
       
       </div>
       </>
-    )
+  )
 }
+
+
 
 export default Body;

@@ -1,0 +1,135 @@
+//// Dont use component inside component///
+
+otherwise child component will be render everytime when the parent component render.
+
+
+//Dont write usestate inside ifelse,forloop//
+
+//Dont write usestate outside the function///
+
+
+
+
+For Duplicate array making used fill method 
+
+Array(10).fill("").map((e)=>{
+    <div></div>
+})
+
+
+Dont use so much unwanted package without its ultimate purpose.
+
+
+For Making A form in React use
+
+Npm install Formik => library *************Important******
+
+
+
+Use Imgages in assets/img folder😊
+win + ;
+
+
+//REACT ROUTER
+
+Npm i react-router-dom
+
+it keeps the ui sync with different url.
+
+its used to navigate from different componenent.
+
+
+// Func 1 - createBrowserRouter ///
+its nothing but a function.
+It was given by react-router-dom  and using for creating a router.
+it have list of path.
+
+//Func 2 - RouterProvider//
+
+it will render all the routes that we put inside createBrowserRouter.it will render all the componenent in order wise.
+
+
+//Func 3 - useRouteError //
+
+It was a hook,so it was a function, it gives an error with good ui,error happen if we use unused path.
+
+
+SPA - Single page application 
+Single page application means if we route to any other page,it will not fetch the data again.
+already we have componenent it will use that.
+it was an client side routing
+we use Link Tag from react-router-dom library for this.
+
+server-side routing
+if we route to any other page,it will fetch the data again from network and laod the content.
+ex : <a></a>
+
+
+
+///Children for my Parent Route///
+
+Children : [{},{}] inside my createBrowserRouter so body only change, header and footer will be fixed.
+
+//Outlet //- component
+Outlet will overwrite my component based on path.
+
+
+//Dynamic routing //
+Id will be changed based on the data.
+
+
+ // const [searchText, setSearchText] = useState("");//
+
+ what if(console.log(useState()))
+
+ it gives the array with two elements
+ 1.state variable - undefined
+ 2.callback function
+
+
+ Dynamic Routing : 
+
+ In useParams() hook we able to read url and get my Dynamic id;
+
+
+ Key must be in mapping element,that means parant element;(map - loop)
+
+///Formik ///
+
+useFormik() - It was an hook and its used to build and manage the react forms.
+
+Its a function and returns the object.
+
+useFormik({
+    initialValues :{
+        name : ''
+    },
+    onSubmit : (argument, automatically get the value),
+    validate : (values) =>{
+    let error = {}
+    return error
+    }
+})
+
+ onChange={formik.handleChange}    => onchange event triggred
+ value = {formik.values.name} = > assigning the value indivually
+<form onSubmit = {formik.handleSubmit}>
+formik.touched.firstname = > if write outside it will return true
+  {...formik.getFieldProps("confirmPassword")} - it have onBlur,onchange,value,name
+
+ initial values => managing the state
+
+ formik.values
+ formik.errors
+
+ yup is an javascript library and is used to validate the react forms.
+
+
+
+ Formik components
+
+ Formil => Useformik hooks
+ Form => handleSubmit
+ Field => handleChange,handleblur,value,getFieldProps
+ errormessages => conditional rendering
+

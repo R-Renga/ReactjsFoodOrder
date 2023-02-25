@@ -1,11 +1,13 @@
 import { useState } from "react";
+import Logo from "../assets/img/foodie.png"
+import {Link} from "react-router-dom"
 
 export const Title = () => {
   return (
     <a href="/">
       <img
         className="logo"
-        src="https://cdn.shopify.com/s/files/1/0506/7708/8463/files/400JpgdpiLogo_360x.jpg?v=1614892241"
+        src= {Logo}
         alt="The Foodie"
       />
     </a>
@@ -19,18 +21,14 @@ const Header = () => {
       <Title />
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>AboutUs</li>
-          <li>Contact</li>
+          <Link to="/"><li>Home</li></Link>
+          <li><Link to="about">AboutUs</Link></li>
+          <Link to="contact"><li>Contact</li></Link>
           <li>Cart</li>
         </ul>
       </div>
       <div>
-        {loggedIn ? (
-          <button onClick={() => {setLoggedIn(false);}}>Logout</button>
-        ) : (
-            <button onClick={() =>setLoggedIn(true)}>Login</button>
-        )}
+          <Link to="/"><button>Logout</button></Link>
       </div>
     </div>
   );

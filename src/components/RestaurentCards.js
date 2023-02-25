@@ -1,4 +1,4 @@
-import { CDN_IMG_URL } from "../Constant"
+import { CDN_IMG_URL } from "../Constants"
 
 
 const RestaurentCards = ({ cloudinaryImageId, name, cuisines, avgRating }) => {

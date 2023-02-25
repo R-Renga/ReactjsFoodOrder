@@ -1,0 +1,19 @@
+<input 
+type="text","password","submit"
+placeholder="firstname"
+name = "firstname" -> attribute
+onblur = > when this input field loses the focus
+/> 
+
+<input 
+type="submit"
+value= "submit-> attribute
+autoComplete = "off" => not show the existing record
+/> 
+
+
+<form></form> - to execute forms
+
+
+<label htmlfor = ""></label>
+htmlfor = its like an id attribute,it sets the value.

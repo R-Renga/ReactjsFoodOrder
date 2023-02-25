@@ -1,14 +1,10 @@
-import { useState } from "react";
-
 
 const Shimmer = () => {
     return (
-        <div className="cards">
-        <img src= ""   
-        alt="ibaco"/>
-        <h2>{}</h2>
-        <h3>{}</h3>
-        <h4>{}</h4>
+        <div className="restaurent-cards">
+        {Array(10).fill("").map((e,index) => 
+          <div key={index} className="shimmer-text"></div>
+        )}
       </div>
     )
 }

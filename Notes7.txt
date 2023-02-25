@@ -1,0 +1,11 @@
+{
+      path: "/about",
+      element: <About/>,
+      Children : [{
+        path :"profile",
+        element:<Profile/> 
+      }]
+      }
+
+
+children of children routing.

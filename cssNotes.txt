@@ -48,3 +48,17 @@ config driven ui - it will generate the UI based on data comes from backend .
 1.line-breaks
 
 break the words to next line
+
+
+//opacity
+
+make word like a shadow
+
+//cursor 
+
+pointer = hand cursor.
+
+
+//input[type="submit"]:hover{
+ 
+ make field hover.
