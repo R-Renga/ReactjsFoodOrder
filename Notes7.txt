@@ -9,3 +9,87 @@
 
 
 children of children routing.
+
+
+///class based components////
+
+
+its like a normal javascript class, in that render method returns the some peice of jsx.
+
+
+class profile extends React.component{
+    render(){
+        return (
+
+        )
+    }
+}
+
+
+extends will inherit some properties from react.
+
+whenever the props send from the parent component,react will attach that to this(THIS) keyword.
+
+
+constructor => whenever the object of class created ,the constructor method will be automatically called. it initialize the 
+               object properties and perform some operation.
+
+
+super(props) - it will be used to initialize the state for our class based components.
+
+constructor(props) = it will be an initial state.
+
+
+
+using state in class based components.
+
+
+constructor(props){
+    super(props);
+    this.state = {
+        count: 0
+    }
+   // this.state = {
+//     count2 : 0
+   // }
+   this will be wrong. it have only one object.
+}
+
+this.setState => to update the initial state. componentDidUpdate - life cycle method.
+
+
+ componentDidMount() {
+    we will write fetch process inside here. its like useEffect.   
+   }
+
+
+react mount - have 2 phases
+
+1.render - constructor,render
+2.commit - side effects, componentdidmount, react updates the dom.
+
+
+componentdidmount
+useEffect - Both are use async await,but in useEffect need to handle it carefully, use async inside the side effect function
+            not directly in call back
+
+            componentDidMount - will be called once after the component render,because its does not have the dependency.
+
+
+
+mounting
+update
+willunmount - when the dom gets empty,if we navigate to another page, it will be called.
+              its used to clean up the function.
+
+
+
+in function component
+
+useEffect (async ()=>{ => it wrong because use effect will used to clean up the function.if we write this ,it will wait so its wrong. 
+return () => {
+    this will be the componentwillunmount in function based component
+}
+},[])
+
+

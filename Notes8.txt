@@ -1,0 +1,70 @@
+custom hooks - >
+
+use utils folder for the common code.
+
+why - readablity,reusable,testable,maintainable(easy to debug)
+
+
+when - when you have some rersusable code,like that,or you have big logic in state means
+
+ 
+how - useRestaurentMenu.js - refer, its like a normal javascript function.
+
+
+
+hooks ? hooks are normal function,it extract some logic from outside function.
+
+
+utils - folder - common files(function),customhooks
+
+
+eventListner => clean eventListner before go out of the component.
+
+
+state variable only return.
+
+online,offline concept
+
+window.addEventListner("online",()=>{
+
+})
+
+window.addEventListner("offline",()=>{
+    
+})
+
+removeEventListners
+
+
+///Bundlers DISADVANTAGE ///
+
+bundlers have merged all the components as one file.what if i have 1000 components.
+it will be slow.
+
+so we need to do 
+
+chunkings
+code splitting
+dynamic bundling
+lazy loading
+on Demand loading
+dynamic import
+
+i will do code splitting for all of my components,when i do bundling when i use webpack,parcel,vite,it will bundle only usage code.
+
+logical bundling.
+
+
+react named import called lazy 
+
+lazy - it bundle the component that only we using in using
+
+lazy will have callback function.
+
+Suspense - it was an userfriendly .it will render something using attribute fallback till the aynchronous operation complete.
+
+attribute => fallback. finally the real component will be render.
+
+ how to fix : A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. 
+
+<suspense>it will load something until asynchronous operation ends</suspense>
