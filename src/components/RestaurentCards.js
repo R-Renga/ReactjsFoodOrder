@@ -4,7 +4,7 @@ import { CDN_IMG_URL } from "../Constants"
 const RestaurentCards = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
     // const {cloudinaryImageId,name,cuisines,avgRating} = props.restaurant.data
     return (
-      <div className="cards">
+      <div className="w-64 p-1 m-1 shadow-md break-words h-72">
         <img src={CDN_IMG_URL + 
         cloudinaryImageId}    
         alt="ibaco"/>

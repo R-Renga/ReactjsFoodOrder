@@ -62,3 +62,11 @@ pointer = hand cursor.
 //input[type="submit"]:hover{
  
  make field hover.
+
+ media queries - write css based on devices
+
+ cons : 
+
+ 1.difficult for beginners.
+ 2.so much classnames
+ 3.difficult the understand the code for the people dont know tailwind..

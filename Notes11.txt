@@ -1,0 +1,93 @@
+redux will work for large scale applications.but context will helpful for small scale application.
+
+Redux -> data management store.
+
+
+
+1.very complex setup
+2.huge learning curve
+3.need extra packages to do something needful.
+4.boilerplate - repeat code.with some mofication or not.
+
+So redux come with redux-toolkit.
+
+Redux saga - used to work for side effects like asynchrnous operation and api calls in a more strutured way.
+
+
+The key difference between Redux and Redux Toolkit is that Redux Toolkit provides a more streamlined API and 
+takes care of much of the boilerplate code that is typically required when using Redux directly. It can help to reduce 
+the amount of code needed to set up and work with Redux, and can make the development process faster and more efficient.
+
+
+
+
+
+
+
+Redux - its a Big Object.it have single store.but we use multple context.
+
+one store have multiple logical slices.
+
+
+
+WRITE :
+
+componenet -> dispatch action -> function(reducer) -> redux slice store. 
+
+READ :
+
+REDUX SLICE STORE -> SELECTOR(hook) - Component
+
+subscribe using Selector - > component subscribe to the store, when slice of store changes, my card will automatically change.
+
+
+npm i @reduxjs/toolkit - core redux
+
+npm i react-redux      - bridge between react and redux.
+
+
+
+configureStore -> Redux toolkit - > to configure store.
+provide ->react-redux ->  provide store to the component.4
+createSlice(separete file) - > redux toolkit - put data in object
+
+
+after npm
+
+TO DO :
+
+
+1.make a store in common place
+   store.js
+   configurestore from rkt
+
+2.provide the store to allllllllll in root component
+     provide -> react-redux
+     store  -> props
+
+3.Create a slices in common place
+  cartslice.js
+  createSlice - from rkt - object
+     1.name - name of the slice
+     2.initialstate - object
+     3.reducers
+         1.actions - (state,action) => state.items === action.payload
+     4.export cartSlice.reducer not s => it combine all in one
+     5.export cartSlice.action
+
+4.Configure the slice in store.
+   {
+      reducer-> export in 3 point{
+         cart : cartslice  - name of the slice : import name - file maybe     
+      }
+}
+  
+
+5. subscribe using selector componenet to store.
+     1.configure useSelector when you need the data to present in ui
+     2.useSelector(store => store.slicename.itemsinsidethat.)
+
+6.Dipatch the action
+   1.onclick - handle some function
+   2.usedispatch hook
+   3. inside write reducer function with item

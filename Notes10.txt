@@ -1,0 +1,199 @@
+two layers
+
+1.ui layers
+2.data layers
+
+ui layers - > jsx - object - dom
+data layers -> handled using state and the props.
+
+
+props drilling - > if props pass A TO D like props chaining.
+
+
+React developer extension in chrome
+
+1.components
+2.profiler
+
+
+State will not be shared
+
+accordian
+
+lifting the state up - it means we move state from child component to the parent component.
+
+profiler => it will record performance of our application.
+
+1.flamegraph
+2.ranked
+3.timeline
+
+
+React Redux -> It will be share the state to all the components in the app.we can able to access the date anywhere.
+               Any componenet can use the date.
+
+
+mobX - another state library
+ngrx
+flux
+
+React have react.Context to come over props drilling.
+
+Central space
+
+
+createContext -> createContext is store some date to access anywhere in the application.
+useContext
+
+context - it will separate to the component
+
+state,props  - tide to the component.
+
+usercontext.provider => it overwrite the staic value by dynamic values. it provide data to the components.
+
+
+import { createContext, useEffect } from "react"
+
+const UserContext = createContext({
+    user: {
+        name: "dummyname",
+        email:"dummy@gmail.com"
+    }
+})
+
+
+
+UserContext.displayName = "UserContext";
+
+export default UserContext;
+
+
+
+In the above code snippet, the spread operator (...) is used to create a new object with all the properties of the existing user object, and then overwrite the specific property (either name or email) with the new value that was entered in the input field.
+
+This is done to ensure that we don't lose the other properties of the user object while updating a single property. Without the spread operator, the code would have overwritten the entire user object with just the updated value of the respective input field, leading to loss of other data.
+
+Using the spread operator in this way helps to update only the specific property that was changed while preserving the other properties of the user object.
+
+
+nested context also a good solution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { useState } from "react";
+
+const Section = ({ user, description, isVisible, setIsVisible }) => {
+    console.log(isVisible);
+    console.log(setIsVisible)
+  return (
+    <div className="p-2 m-2 border border-black">
+      <h1 className="text-xl font-bold">{user}</h1>
+      {!isVisible ? (
+        <button
+          onClick={() => {
+            setIsVisible(true);
+          }}
+          className="underline"
+        >
+          Show
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            setIsVisible(false);
+          }}
+          className="underline"
+        >
+          Hide
+        </button>
+      )}
+      {isVisible && <p>{description}</p>}
+    </div>
+  );
+};
+
+const Instamart = () => {
+  const [isVisible, setIsVisible] = useState({
+    career: false,
+    team: false,
+  });
+  console.log(isVisible,"parent");
+  console.log(setIsVisible,"parent")
+  return (
+    <div>
+      <h1 className="text-2xl font-bold p-2 m-2">Instamart</h1>
+      <Section
+        user={"Career"}
+        description={
+          "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+        }
+              isVisible={isVisible.career}
+              setIsVisible={() => {
+                  setIsVisible({
+                    career: true,
+                    team: false
+                })
+              }}
+      />
+      <Section
+        user={"Team"}
+        description={
+          "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+        }
+              isVisible={isVisible.team}
+              setIsVisible={() => {
+                setIsVisible({
+                  career: false,
+                  team: true
+              })
+            }}
+          />
+          
+    </div>
+  );
+};
+
+export default Instamart;

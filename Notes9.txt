@@ -1,0 +1,93 @@
+Why do we need css frameworks?
+
+Because it was optimized css,more readable and savings time.
+
+
+css-> it was an statndard language.it gives some presentation to our website
+
+scss-> sassy css is a preprocessor that give additional features to css like nesting,variables.
+       In Browser it convert to css.
+
+
+internal css - > writing css inside jsx.
+
+when use library for css - > it have consistent ui,maintainable,readable,reusable.
+
+matrial ui,
+ant design,
+base ui.
+tailwind css
+bootstrap.
+
+It gives pre Build component.
+
+
+DISADVANTAGE - > it makes the bundle size heavier.
+
+sass -  >syntactically awesome style sheet.
+
+
+native css - css have common file like index.js and we do raw css.
+scss - sassy css is a preprocessor that give additional features to css like nesting,variables.
+       In Browser it convert to css.\
+
+library (pre build component) -  it have consistent ui,maintainable,readable,reusable.
+                                 materialui, ant design, chakra, base ui
+
+Inline = > it have css in jsx <h1 style={{
+ color : red;
+}}></h1>
+
+styledComponents - > it was an library,it makes our html tag as styledComponents.write css in jsx.also add props to it.
+                    props => ${props.primary ? "blue" : "red"} 
+                    lambda
+
+
+import styled from 'styled-components';
+
+const Button = styled.button `
+color:red;
+padding : 2px;
+color : ${props => props.primary ? 'red':'blue'}
+`
+
+component {
+       <Button>submit</Button>
+       <Button primary></Button>
+}
+
+
+scss and sass - syntax will be differ.
+
+
+//Tailwind css///
+
+1.Write css on the go.it means write css in same file.
+2.reusablity
+3.less bundle size
+4.flexible ui (customization)
+
+Tailwind - default behaviour if we add in our project.if we didnt give css class name.you need to write 
+           in tailwind style.otherwise it will be overwritted.
+
+1.We put our css in className
+
+
+npm install -D tailwindcss postcss
+npx tailwindcss init
+
+
+postcss - > it used to convert our tailwind css to normal css in browser.
+tailwind.config.js - > while exeuting tailwind using npx - inside we declare the file tailwind needs to apply.
+.postcssrc -> configure tailwind, to tell our bundlers to that our project have tailwind, so bundle that also.
+              bundle size was less for tailwind.
+
+index.css - @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+tailwind also have code splitting,its just like importing tailwind in our css file.
+
+tailwind css intellisense -> it give suggestion when we using tailwind css. extension.
+
+ctrl + space
