@@ -39,7 +39,8 @@ const Body = () => {
   ) : (
     <>
       <div className="p-3 m-3 text-center">
-        <input
+          <input
+            data-testid = "search-text"
           className="p-2 shadow-md outline outline-offset-2 outline-1 ... rounded-md"
           type="text"
           placeholder="Search"
@@ -48,18 +49,21 @@ const Body = () => {
             setSearchText(e.target.value);
           }}
           />
-        <button
+         <button
+          data-testid="search-btn"
+          className="p-2 m-2 bg-purple-900 hover:bg-gray-500 text-white rounded-md"
           onClick={() => {
+            //need to filter the data
             const data = filterdata(searchText, allRestaurent);
+            // update the state - restaurants
             setFilterData(data);
-            }} 
-            className="ml-10 bg-red-400 p-2 rounded-md"
+          }}
         >
           Search
-          </button>
+        </button>
           <h1 className="p-2 m-2">{user.name}</h1>
       </div>
-      <div className="flex flex-wrap p-2 m-2 justify-between">
+      <div className="flex flex-wrap p-2 m-2 justify-between" data-testid="res-list">
         {filterData.map((restaurant) => {
           return (
             <Link

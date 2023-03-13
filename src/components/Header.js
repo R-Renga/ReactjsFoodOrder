@@ -10,6 +10,7 @@ export const Title = () => {
   return (
     <a href="/">
       <img
+        data-testid = "logo"
         className="h-28"
         src= {Logo}
         alt="The Foodie"
@@ -36,7 +37,7 @@ const Header = () => {
           <li className="p-10"><Link to="about">AboutUs</Link></li>
           <Link to="contact" className="p-10"><li>Contact</li></Link>
           <li className="p-10"><Link to="instamart">instamart</Link></li>
-          <Link to="cart"><li className="p-10">Cart - {cartItems.length} items</li></Link>
+          <Link to="cart"><li className="p-10" data-testid="cartItems">Cart - {cartItems.length} items</li></Link>
         </ul>
       </div>
       <div className="p-10">

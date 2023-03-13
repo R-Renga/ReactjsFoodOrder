@@ -1,0 +1,107 @@
+TESTING
+
+
+1.ENZYME - > Testing Utility.
+2.React Testing Library(jest) - latest - more user-focused tool 
+3.jest is a framework used to any javascript code. but rtl is used to test react components only.
+
+
+Test Driven development
+1.Write Test cases before development - it will be good,but the process is slow.
+
+Why do we need Testing?
+1.DONT Break the existing code and flow.
+2.Performance
+3.Heap memory.
+
+
+1.manual testing - smartappbuilder
+2.automation testing 
+  1.selinum
+  2.cypress
+  3.headless browser - its a web browser using for automation testing.
+
+
+1.Unit Testing -  >unit test will used to test the individual units,like need to test feature or component wise.
+2.Automation Testing - >This Testing focuses on interaction between two features,two components.
+
+Npm install react-testing-library
+npm install jest
+
+configure jest
+1.npx jest --init
+2.npm install jest-environment-jsdom
+3.first test file
+4.__tests__
+5.sum.test.je
+6.Test("name of the test",()=>{
+  callback function
+     1.expect(function).needs to be (answer)
+})
+7.install babel for jest.(npm install --save-dev babel-jest @babel/core @babel/preset-env)
+8.babel tells jest,its have an import
+9.configure babel i n .babelrc file.
+10.gitignore coverage.
+
+11.UNIT TESTING  :
+
+1.TEST CASES FOR Header component
+  1.jsdom - its like a machine in local system
+  2.react testing library gives container to render the components.
+  3.crate new file for header components
+  4.jest will not load png files or anyhting some other than js.so whenever its load png we tells jest to load mock file.
+     configure this in jest.config.file
+     moduleNameMapper: { 
+    "\\.(jpg|png|svg)$":"../mocks/DUmmyLogo.js"
+   }
+
+  5.use babel to run jsx in jest.
+     1.["@babel/preset-react", { "runtime": "automatic"}]
+
+  6.Provider redux to jest
+  7.react router dom - static provider to jest
+      import { StaticRouter } from "react-router-dom/server";
+  8.test the specific element in header ex - img
+  9.give id for the element like data-testid = "logo"
+  10.after render header component against one variable we get the whole virtual dom
+  11.In that we going to take the logo using header.getAllByTestId
+  12.Run the logo like expect tobe concept.
+  13.check whether the cart items is 0  - getByTestId - you don't need to put array [0].
+  14.It show the whole html in getbytestid
+
+
+2. INTEGRATION TESTING
+
+Body component
+
+1.redux- provider with store
+2.router - StaticRouter
+3.fetch - jest will not underdstand fetch which comes from web api
+4.we need to create fetch with mock data for only testing.
+   jest.fn(() =>
+   global.fetch = jest.fn(() => {
+    return Promise.resolve({
+        json: () => {
+            Promise.resolve(Restaurent_Data)
+        }
+    })
+    
+}
+)
+5.shimmer - 
+   1.toBeInTheDocument - used to check whether the page load in the document
+   2.expect children length be 10
+
+6.restaurentcards
+
+   1.it was an async function so need to wait 
+       await waitfor(()=> expect(body.getbytestid("button comes or not)))
+   2.event testing using fireevent
+   3.search-text - first give attribute in input element
+   4.fireevent.change have 2 argument
+      1.input box attribute ,second object - > target.value
+
+   5. fireEvent.click(buttontext)
+
+   6.screen . if we didnt assigner render against one variable.
+

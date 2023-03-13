@@ -29,10 +29,10 @@ const RestaurentMenu = () => {
           <h1 className="font-bold text-2xl p-3">Location : {hotel.area}</h1>
       </div>
       <div className="p-2 justify-between">
-        <h1 className="font-bold">Menu Items</h1>
+        <h1 className="font-bold" data-testid = "res">Menu Items</h1>
         <ul>
           {Object.values(hotel.menu.items).map((item) => (
-            <li key={item.id}>{item.name} <button className="bg-green-200 p-1 m-1" onClick={()=>addFoodItem(item)}>Add</button></li>
+            <li key={item.id}>{item.name} <button className="bg-green-200 p-1 m-1" data-testid = "add-btn" onClick={()=>addFoodItem(item)}>Add</button></li>
           ))}
         </ul>
       </div>
